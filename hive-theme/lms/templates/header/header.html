@@ -51,24 +51,30 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   </script>
 % endif
 
-<nav class="navbar navbar-expand-lg navbar-light py-0">
-  % if use_cookie_banner:
-    ${static.renderReact(
-      component="CookiePolicyBanner",
-      id="frontend-component-cookie-policy-banner",
-      props={}
-    )}
-  % endif
-  <a class="navbar-brand alcore-logo" href="/dashboard">Alcore</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  % if user.is_authenticated:
-    <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
-  % else:
-  <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
-  % endif
-</nav>
+<header class="global-header ${'slim' if course else ''}">
+    % if use_cookie_banner:
+        ${static.renderReact(
+            component="CookiePolicyBanner",
+            id="cookie-policy-banner",
+            props={}
+        )}
+    % endif
+    <div class="main-header">
+        <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
+        <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        % if user.is_authenticated:
+            <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
+        % else:
+            <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
+        % endif
+    </div>
+    <div class="mobile-menu hidden" aria-label=${_("More Options")} role="menu" id="mobile-menu"></div>
+</header>
 
 % if course:
 <!--[if lte IE 9]>
