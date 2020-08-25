@@ -46,14 +46,14 @@ from openedx.core.djangolib.markup import HTML, Text
       <div class="footer-about-copyright">
         <p>
           ${Text(_("Alcore Academy, it's logos are registered trademarks of {link_start}Foundercore, Inc.{link_end}")).format(
-            link_start=HTML(u"<a data-rel='alcore.academy' href='https://www.alcore.academy/'>"),
+            link_start=HTML(u"<a data-rel='alcore.academy' href='https://www.foundercore.org/'>"),
             link_end=HTML(u"</a>")
           )}
         </p>
       </div>
 
       <div class="footer-about-openedx">
-        <a href="https://www.alcore.academy" title="${_("Powered By Alcore Academy")}">
+        <a href="https://www.alcore.academy" title="${_("Powered By Alcore Academy")}" class="alcore-logo">
           Alcore
         </a>
       </div>
