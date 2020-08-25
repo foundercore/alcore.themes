@@ -64,11 +64,9 @@
       <div class="colophon">
         <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
-              % for item_num, link in enumerate(footer['navigation_links'], start=1):
               <li class="nav-colophon-0${item_num}">
                 <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
               </li>
-              % endfor
           </ol>
         </nav>
 
@@ -78,12 +76,13 @@
 
         <nav class="nav-legal" aria-label="${_('Legal')}">
           <ul>
-            % for item_num, link in enumerate(footer['legal_links'], start=1):
-              <li class="nav-legal-0${item_num}">
-                <a href="${link['url']}">${link['title']}</a>
-              </li>
-            % endfor
-            <li><a href="http://www.alcore.academy">http://www.alcore.academy</a></li>
+            <li class="nav-legal-00">
+              <a href="https://alcore.academy/privacy">Privacy Policy</a>
+            </li>
+            <li class="nav-legal-02">
+              <a href="https://alcore.academy/tos">Terms of Service</a>
+            </li>
+            <li><a href="https://www.alcore.academy">www.alcore.academy</a></li>
           </ul>
         </nav>
       </div>
