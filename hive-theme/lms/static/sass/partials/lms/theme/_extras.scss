@@ -11,3 +11,9 @@
   font-family: 'Rock Salt', cursive !important;
   text-decoration: none !important;
 }
+
+.content-wrapper {
+  .main-container {
+    min-height: calc(100vh - 230px);
+  }
+}
