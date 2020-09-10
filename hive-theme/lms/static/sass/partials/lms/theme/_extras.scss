@@ -6,14 +6,18 @@
 // partials directly into this file so that you can break your
 // rules into modular pieces.
 .alcore-logo {
-  font-size: 14px !important;
-  color: #FF5722 !important;
-  font-family: 'Rock Salt', cursive !important;
-  text-decoration: none !important;
+	font-size: 14px !important;
+	color: #ff5722 !important;
+	font-family: 'Rock Salt', cursive !important;
+	text-decoration: none !important;
 }
 
 .content-wrapper {
-  .main-container {
-    min-height: calc(100vh - 290px);
-  }
+	.main-container {
+		min-height: calc(100vh - 290px);
+	}
+}
+
+.hide-element {
+	display: none;
 }
