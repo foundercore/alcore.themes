@@ -1,0 +1,38 @@
+<%page expression_filter="h" />
+<%!
+from django.conf import settings
+from django.utils.translation import ugettext as _
+%>
+<%namespace file="sock_links_extra.html" import="get_sock_links_extra" />
+
+<%def name="get_sock_links()">
+    <%
+        partner_email = settings.PARTNER_SUPPORT_EMAIL
+        links = [
+            {
+                'href': '',
+                'sr_mouseover_text': _('Access documentation on'),
+                'text': _('Alcore Documentation'),
+                'condition': True
+            }, {
+                'href': 'https://open.edx.org',
+                'sr_mouseover_text': _('Access the Open Alcore Portal'),
+                'text': _('Open Alcore Portal'),
+                'condition': True
+            }, {
+                'href': '',
+                'sr_mouseover_text': _('Enroll in StudioX: Creating a Course with Alcore Studio'),
+                'text': _('Enroll in Alcore StudioX'),
+                'condition': True
+            }, {
+                'href': 'mailto:{email}'.format(email=partner_email),
+                'sr_mouseover_text': _('Send an email to {email}').format(email=partner_email),
+                'text': _('Contact Us'),
+                'condition': bool(partner_email)
+            }
+        ]
+        links_extra = get_sock_links_extra()
+        links += links_extra
+        return links
+    %>
+</%def>
