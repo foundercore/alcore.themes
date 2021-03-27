@@ -13,8 +13,9 @@
   <div class="container-fluid wrapper-footer">
     <footer>
       <div class="row">
-        <div class="col-md-9">
-          <nav class="navbar site-nav navbar-expand-sm" aria-label="${_('About')}">
+        <div class="col-md-9" style="font-size: 12px; text-align: left;">
+	  Powered By <b>Foundercore</b>
+          <!-- <nav class="navbar site-nav navbar-expand-sm" aria-label="${_('About')}">
             <ul class="navbar-nav">
               % for item_num, link in enumerate(footer['navigation_links'], start=1):
                 <li class="nav-item">
@@ -22,10 +23,10 @@
                 </li>
               % endfor
             </ul>
-          </nav>
+          </nav> -->
 
           <nav class="navbar legal-nav navbar-expand-sm" aria-label="${_('Legal')}">
-            <ul class="navbar-nav">
+            <!-- <ul class="navbar-nav">
               % for item_num, link in enumerate(footer['legal_links'], start=1):
                 <li class="nav-item">
                   <a class="nav-link" href="${link['url']}">${link['title']}</a>
@@ -34,16 +35,19 @@
               <!-- <li class="nav-item">
                 <a class="nav-link" href="${footer['edx_org_link']['url']}">${footer['edx_org_link']['text']}</a>
               </li> -->
-            </ul>
+            </ul>  -->
+		
           </nav>
+	
         </div>
         <div class="col-md-3">
           % if not hide_openedx_link:
             <div class="footer-about-openedx">
-              <p>
+              <p style="font-size: 12px; text-align: right;">
                 <!-- <a href="https://www.alcore.academy" class="alcore-logo">
                   Alcore
                 </a> -->
+		 &#169; 2020 Endeavor Careers All rights reserved.
               </p>
             </div>
           % endif
@@ -61,20 +65,21 @@
         dir=${bidi}
       % endif
     >
-      <div class="colophon">
-        <nav class="nav-colophon" aria-label="${_('About')}">
+      <div class="colophon" style="font-size: 12px; text-align: left;">
+	Powered By <b>Foundercore</b>
+        <!-- <nav class="nav-colophon" aria-label="${_('About')}">
           <ol>
               <li class="nav-colophon-00">
                 <a id="nav.colophon.alcore" href="https://www.alcore.academy/about">About</a>
               </li>
           </ol>
-        </nav>
+        </nav> -->
 
         % if context.get('include_language_selector', footer_language_selector_is_enabled()):
             <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
         % endif
 
-        <nav class="nav-legal" aria-label="${_('Legal')}">
+        <!-- <nav class="nav-legal" aria-label="${_('Legal')}">
           <ul>
             <li class="nav-legal-00">
               <a href="https://alcore.academy/privacy">Privacy Policy</a>
@@ -84,15 +89,16 @@
             </li>
             <li><a href="https://www.alcore.academy">www.alcore.academy</a></li>
           </ul>
-        </nav>
+        </nav> -->
       </div>
 
       % if not hide_openedx_link:
-      <div class="footer-about-openedx">
-        <p>
+      <div class="">
+        <p style="font-size: 12px; text-align: right;">
           <!-- <a href="http://www.alcore.academy" class="alcore-logo">
             Alcore
           </a> -->
+	  &#169; 2020 Endeavor Careers All rights reserved.
         </p>
       </div>
       % endif
