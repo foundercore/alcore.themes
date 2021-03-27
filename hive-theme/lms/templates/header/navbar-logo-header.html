@@ -15,9 +15,12 @@ from branding import api as branding_api
 
 <h1 class="header-logo">
   <a  href="${branding_api.get_home_url()}">
-    <%block name="navigation_logo">
+    <!-- <%block name="navigation_logo">
       Endeavor Careers
-    </%block>
+    </%block> -->
+    <img src="https://www.endeavorcareers.com/wp-content/themes/endeavor/assets/images/endeavor-logo.svg"
+      title="Endeavor Careers" 
+      alt="CAT, CMAT, GMAT, GRE, MH-CET, CLAT Coaching Classes and Training Center"> 
   </a>
   % if course:
     <div class="course-header">
