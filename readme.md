@@ -11,7 +11,7 @@ Themes Update
 - Enter the following details :
   - Enter the platform name: Endeavor Careers LMS
   - Enter the machine private IP: 172.31.21.107
-  - Enter the sub-domain name: iendeavor.endeavorcareers.com
-  - Enter the cms-domain name: staff.iendeavor.endeavorcareers.com
+  - Enter the sub-domain name: iendeavor
+  - Enter the cms-domain name: staff.iendeavor
   - Enter system user's email: no-reply@foundercore.org
   - Enter system user's password: XXXXXX(get from teams)
